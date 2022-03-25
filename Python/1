@@ -1,0 +1,11 @@
+prev = ''
+
+def replacedChar():
+    nonlocal prev
+    res = ''
+
+    res = inlocuire[random.randint(0, len(inlocuire) - 1)]
+    while res == prev:
+        res = inlocuire[random.randint(0, len(inlocuire) - 1)]
+    prev = res
+    return res
