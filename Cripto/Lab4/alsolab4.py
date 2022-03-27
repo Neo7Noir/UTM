@@ -6,7 +6,7 @@ from collections import deque
 #    print("Cheia trebuie sa fie egala cu 56 de biti, introduceti cheia din nou")
 #    Key_p = input("Introduceti Key+ =>")
  
-Key_p = input("1111000 0110011 0010101 0101111 0101010 1011001 1001111 0001111")
+Key_p = "1111000 0110011 0010101 0101111 0101010 1011001 1001111 0001111"
 
 key = Key_p.replace(" ","")
 
