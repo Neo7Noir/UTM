@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Key_p = input("Introduceti Key+ =>")
 Key_p = Key_p.replace(" ","")
 while len(Key_p) != 56:
@@ -7,6 +8,14 @@ while len(Key_p) != 56:
 
 
 #Key_p = "11110000110011001010101011110101010101100110011110001111"
+=======
+#Key_p = input("Introduceti Key+ =>")
+#while len(Key_p) != 56:
+#    print("Cheia trebuie sa fie egala cu 56 de biti, introduceti cheia din nou")
+#    Key_p = input("Introduceti Key+ =>")
+
+Key_p = "11110000110011001010101011110101010101100110011110001111"
+>>>>>>> 776fb035250bdec674a86ea0d972daa4334f86eb
 
 list = list(Key_p) 
  
@@ -21,7 +30,7 @@ print(C)
 print(D)
 
 i = int(input("Dati i (1<=i<=16) pentru Ci si Di dorit: (1<=i<=16)"))
-for a in range (1,i):
+for a in range (1,i+1):
     if (i==1 or i==2 or i==9 or i==16):
         C.append(C.pop(0))
         D.append(D.pop(0))
