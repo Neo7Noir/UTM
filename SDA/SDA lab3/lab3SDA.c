@@ -80,33 +80,32 @@ int main(){
     FILE *f;
     f = fopen(fisier, "w");
 
-    char *fisier1 = "primulF.txt";
-    FILE *g;
-    char string[250];
-    char* result = NULL;
+        char *fisier1 = "primulF.txt";
+        FILE *g;
+        char string[250];
+        char* result = NULL;
+            g = fopen(fisier1, "r");
+            fgets(string, 250 ,g);
+            printf("%s", string);
+            fclose(g);
 
-    g = fopen(fisier1, "r");
-    fgets(string, 250 ,g);
-    printf("%s", string);
-    fclose(g);
+        result = replaceWord(string, word1, word2);
 
-    result = replaceWord(string, word1, word2);
+        fwrite(result, 1, strlen(result), f);
 
-    fwrite(result, 1, strlen(result), f);
+        char *fisier2 = "doiF.txt";
+        FILE *h;
+        result = NULL;
+            h = fopen(fisier2, "r");
+            fgets(string, 250 ,h);
+            printf("%s", string);
+            fclose(h);
 
-    char *fisier2 = "doiF.txt";
-    FILE *h;
-    result = NULL;
+        fwrite("\n", 1, strlen("\n"), f);
 
-    h = fopen(fisier2, "r");
-    fgets(string, 250 ,h);
-    printf("%s", string);
-    fclose(h);
-    fwrite("\n", 1, strlen("\n"), f);
+        result = replaceLastLineWord(string, word2, word1);
 
-    result = replaceLastLineWord(string, word2, word1);
-
-    fwrite(result, 1, strlen(result), f);
+        fwrite(result, 1, strlen(result), f);
 
 fclose(f);
 }

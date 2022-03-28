@@ -1,7 +1,10 @@
 Key_p = input("Introduceti Key+ =>")
+Key_p = Key_p.replace(" ","")
 while len(Key_p) != 56:
     print("Cheia trebuie sa fie egala cu 56 de biti, introduceti cheia din nou")
     Key_p = input("Introduceti Key+ =>")
+
+
 
 #Key_p = "11110000110011001010101011110101010101100110011110001111"
 
