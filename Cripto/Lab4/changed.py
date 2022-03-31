@@ -17,12 +17,12 @@ C = list[:middle_index]
 D = list[middle_index:] 
  
 #print(C) 
-print("Ci: " + "".join(C))
-print("Ci: " + "".join(D))
+print("C0: " + "".join(C))
+print("C0: " + "".join(D))
 #print(D)
 i = int(input("Dati i (1<=i<=16) pentru Ci si Di dorit: (1<=i<=16)"))
 for a in range (1,i+1):
-    if (i==1 or i==2 or i==9 or i==16):
+    if (a==1 or a==2 or a==9 or a==16):
         C.append(C.pop(0))
         D.append(D.pop(0))
     else: 
@@ -34,4 +34,4 @@ for a in range (1,i+1):
 #print(C) 
 #print(D)
 print("Ci: " + "".join(C))
-print("Ci: " + "".join(D))
+print("Di: " + "".join(D))

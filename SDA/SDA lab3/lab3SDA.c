@@ -86,7 +86,6 @@ int main(){
         char* result = NULL;
             g = fopen(fisier1, "r");
             fgets(string, 250 ,g);
-            printf("%s", string);
             fclose(g);
 
         result = replaceWord(string, word1, word2);
@@ -98,7 +97,6 @@ int main(){
         result = NULL;
             h = fopen(fisier2, "r");
             fgets(string, 250 ,h);
-            printf("%s", string);
             fclose(h);
 
         fwrite("\n", 1, strlen("\n"), f);
