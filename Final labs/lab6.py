@@ -66,7 +66,6 @@ def MST():
 
 def Menu():
     while True :
-        print("\n*******Meniul principal*******")
 
         choice = input("""
         
@@ -86,6 +85,6 @@ def Menu():
         elif choice == "0":
             quit()
         else :
-            print("alegerea nu este din meniu")
+            print("Alegeti va rog variantele din meniu (1/2/3/0)")
 
 Menu()

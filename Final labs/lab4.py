@@ -1,4 +1,3 @@
-from typing import Any
 import networkx as nx 
 import matplotlib.pyplot as plt
 
@@ -11,37 +10,31 @@ path = ""
 while path != "maxim" or path != "minim":
     print("Introduceti dupa modelul din paranteze (maxim / minim)")
     path = input("Drumul minim sau maxim?(maxim/minim): ").lower()
-    if path == "maxim":
-        for x in range(edges_nr):
-            G.add_edge(int(input("Primnul nod=>")),
-                       int(input("Nodul adicent=>")), 
-                       weight = -abs(int(input("Ponderea=>"))))
-            x += 1
-        length = dict(nx.all_pairs_bellman_ford_path_length(G))
-        pos = nx.circular_layout(G)
-        nx.draw_networkx(G, pos)
-        labels = nx.get_edge_attributes(G, ('weight'))
-        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
-        plt.show()
-        break
- 
-    elif path == "minim":
+
+    if  path == "minim":
         for x in range(edges_nr):
             G.add_edge(int(input("Primnul nod=>")),
                        int(input("Nodul adicent=>")), 
                        weight = int(input("Ponderea=>")))
             x += 1
-        length = dict(nx.all_pairs_bellman_ford_path_length(G))
-        pos = nx.circular_layout(G)
-        nx.draw_networkx(G, pos)
-        labels = nx.get_edge_attributes(G, ('weight'))
-        nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
-        plt.show()
-        break
+ 
+    elif path == "maxim":
+        for x in range(edges_nr):
+            G.add_edge(int(input("Primnul nod=>")),
+                       int(input("Nodul adicent=>")), 
+                       weight = -abs(int(input("Ponderea=>"))))
+            x += 1
 
+    length = dict(nx.all_pairs_bellman_ford_path_length(G))
+    pos = nx.circular_layout(G)
+    nx.draw_networkx(G, pos)
+    labels = nx.get_edge_attributes(G, ('weight'))
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+    plt.show()
+    break
 
-x = int(input("nodul de start: "))
-y = int(input("ultimul nod: "))
+x = int(input("Nodul de start: "))
+y = int(input("Ultimul nod: "))
 
 
 if path == "maxim":

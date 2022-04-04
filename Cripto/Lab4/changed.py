@@ -33,5 +33,5 @@ for a in range (1,i+1):
 
 #print(C) 
 #print(D)
-print("Ci: " + "".join(C))
-print("Di: " + "".join(D))
+print(f"C{i}: " + "".join(C))
+print(f"D{i}: " + "".join(D))

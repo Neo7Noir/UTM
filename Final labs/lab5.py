@@ -16,4 +16,4 @@ x = int(input("Nodul de start=>"))
 y = int(input("Nodul de finis=>"))
 
 flow_value = nx.maximum_flow(G, x, y)
-print(f"Capacitatea maxima pe graf este {flow_value}")
+print(f"Capacitatea maxima pe graf=> {flow_value}")
