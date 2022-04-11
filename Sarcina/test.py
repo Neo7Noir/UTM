@@ -12,7 +12,7 @@ class Node(object):
         self.children = list() if children is None else children
 
 def dfs(node):
-    path = list()
+    path = list() 
     
     def recurse(n):
         path.append(n)
@@ -40,13 +40,13 @@ def Add_Nodes(level, actions):
           s = np.random.randint(0,100)
           child.children.append( Node(idk, level+1, a, s, v, child, None) )
       childs_new += child.children
-    childs = childs_new
+    childs = childs_new    
 
 idk = 0
 childs = []
 root = None
 actions = 6
-levels = 10
+levels = 20
 root = Node(idk, 0, 0, 0, 0, None, None)
 childs.append(root)
 
