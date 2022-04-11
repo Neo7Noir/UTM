@@ -1,72 +1,28 @@
-import numpy as np
-import itertools
+import pdb
+from random import randint
 
-class Node(object):
-    def __init__(self, id, level, action, state, value, reward, parent, children=None):
-        self.id = id
-        self.level = level
-        self.parent = parent
-        self.action = action
-        self.state = state
-        self.value = value
-        self.children = list() if children is None else children
 
-def dfs(node):
-    path = list()
-    
-    def recurse(n):
-        path.append(n)
-        if not n.children:
-            yield path
-        for child in n.children:
-            for x in recurse(child):
-                yield x
+max = []
+sumMax = 0
 
-        path.pop()
+def calc(n, currNivel, nivel, pondereSum, tempMax, i):
+    global sumMax
+    global max
+    pdb.set_trace()
+    print(currNivel, " ", nivel,"",i)
+    print(type(currNivel),"",type(nivel))
+    print(currNivel == nivel)
+    if currNivel == nivel:
+        if(pondereSum > sumMax):
+            sumMax = pondereSum
+            #max = tempMax
+        return 0
 
-    for v in recurse(node):
-        yield path
+    for i in range(1,n+1):
+        #tempMax.append(i*currNivel)
+        pondereSum += randint(0,100)
+        currNivel += 1
+        calc(n, currNivel, nivel, pondereSum, tempMax, i)
+        #tempMax.pop(len(tempMax) - 1)
 
-def Add_Nodes(level, actions):
-    global root
-    global idk
-    global childs
-    childs_new = []
-
-    for child in childs:
-      for a in range(6):
-          idk += 1
-          v = np.random.randint(0,100)
-          s = np.random.randint(0,100)
-          child.children.append( Node(idk, level+1, a, s, v, child, None) )
-      childs_new += child.children
-    childs = childs_new
-
-idk = 0
-childs = []
-root = None
-actions = 6
-levels = 6
-root = Node(idk, 0, 0, 0, 0, None, None)
-childs.append(root)
-
-for i in range(levels):
-  Add_Nodes(i, actions)
-
-max_path_value = 0
-
-maxpath = None
-
-for path in dfs(root):    
-    path_str = ""
-    for n in path:
-          path_str +=  "{}({}), ".format(n.id, n.value)
-
-    path_value = sum(n.value for n in path)
-    print("{} : {}".format(path_value, path_str))
-
-    if max_path_value < path_value:
-      max_path_value = path_value
-      maxpath = "{} : {}".format(path_value, path_str)
-
-print("Maximum path:\n", maxpath, "\n")
+calc(3, 0, 5, randint(0,100), [], 0)
