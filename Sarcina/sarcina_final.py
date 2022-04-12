@@ -9,13 +9,12 @@ def calc(n, currNivel, nivel, pondereSum, tempMax):
     global sumMax
     global maxN
     global currNode 
-    #pdb.set_trace()
 
     if currNivel >= nivel:
         if pondereSum >= sumMax:
             sumMax = pondereSum
             maxN = tempMax.copy()
-        return 
+        return
 
     for i in range(1,n+1):
         pond = randint(0,100)
