@@ -25,7 +25,9 @@ def calc(n, currNivel, nivel, pondereSum, tempMax):
 
 start = time.time()
 a = randint(0,100)
+
 calc(2, 1, 20, 0, [[currNode,0]])
+#calc(nr de copii,primul nod,numarul de nivele,ponderea initiala,lista de noduri si ponderea lor)
 end = time.time()
 print(sumMax,"",end-start)
 print(maxN)
