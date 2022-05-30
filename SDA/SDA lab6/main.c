@@ -82,34 +82,5 @@ int main(){
 		printf("\nPress any key to continue...");
 		getch();
 	}while(option != 0);
-	/*
-	printf("123");
-
-	append(&head, "qwe", "dhgdfgh", 123123, "gdsf", 12.2);
-	append(&head, "safgs", "dhgdfgh", 123123, "gdsf", 12.2);
-	append(&head, "ljf", "dhgdfgh", 123123, "gdsf", 12.2);
-	append(&head, "fdgh", "dhgdfgh", 123123, "gdsf", 12.2);
-
-
-	printIn(head);
-	*/
-
-	// struct tree *temp = search(head, "ljf");
-	//
-	// if(temp)
-	// 	printf("%s \n", temp -> data.denumire);
-	//
-
-	//change(&head, "ljf");
-	//printIn(head);
-
-	// numNode(head);
-	// printf("%d\n", count);
-	//
-	// int height = heightOfTree(head);
-	// printf("%d", height);
-	//
-	// clearTree(&head);
-	// printIn(head);
 	return 0;
 }
