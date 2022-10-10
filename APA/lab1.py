@@ -67,30 +67,27 @@ print("Timpul de executie: ", end,"s")
 
 #Afisarea cu Matplotlib
 l_iter=[1, 1]
-for i in range(3,30,3):
+for i in range(3,35,2):
     a, b, c = fibonacci_iter(i)
     l_iter.append(b)
 
 l=[]
 l_recur=[]
-for i in range(1,30,3):
+for i in range(1,35,2):
     l.append(i)
     fibonacci_rec(i)
     l_recur.append(iter1)
 
-# print(l_recur)
-# print(l_iter)
-
 l_form = []
-for i1 in range(1,15):
+for i1 in range(1,30):
     l_form.append(1)
-#print(l_form)
+
 
 nr_elem=int(input("Cate elemente de depus in grafic? "))
 plt.plot(l[:nr_elem], l_iter[:nr_elem])
 plt.plot(l[:nr_elem], l_recur[:nr_elem])
 plt.plot(l[:nr_elem], l_form[:nr_elem])
 plt.legend(["Iterativa", "Recursiva", "Formula"])
-plt.xlabel('Fibonacci numbers')
+plt.xlabel('Fibonacci positions')
 plt.ylabel('Iterations')
 plt.show()
