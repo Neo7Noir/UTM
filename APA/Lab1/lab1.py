@@ -67,20 +67,23 @@ print("Timpul de executie: ", end,"s")
 
 #Afisarea cu Matplotlib
 l_iter=[1, 1]
-for i in range(3,35,2):
+for i in range(3,40,2):
     a, b, c = fibonacci_iter(i)
     l_iter.append(b)
 
 l=[]
 l_recur=[]
+iter1=0
 for i in range(1,35,2):
     l.append(i)
     fibonacci_rec(i)
     l_recur.append(iter1)
 
 l_form = []
-for i1 in range(1,30):
+for i1 in range(1,40):
     l_form.append(1)
+print(l_iter)
+print(l_recur)
 
 
 nr_elem=int(input("Cate elemente de depus in grafic? "))
